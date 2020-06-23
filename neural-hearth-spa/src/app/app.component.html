@@ -1,0 +1,77 @@
+
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<div class="row ml-0 w-100">
+							<div class="col-lg-12 pr-0">
+								<ul class="nav navbar-nav center_nav pull-right">
+									<li class="nav-item">
+										<a class="nav-link">Home</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+    </div>
+
+    <section class="section_gap diagnosis-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 pr-0">
+					<div class="about_img">
+						<img class="img-fluid w-100" src="../assets/heart-doctor.jpg" alt="">
+          </div>
+				</div>
+
+				<div class="col-lg-6 col-md-6 pt-60 pb-60">
+					<div class="diagnosis-right">
+						<form *ngIf="visibleForm" #pacientForm="ngForm" class="form-wrap" (ngSubmit)="enviarDatosPacientes()">
+							<h3 class="pb-20 text-center mb-20">Datos del paciente del electrocardiograma</h3>
+							<input type="text" class="form-control" name="name" placeholder="Edad" required [(ngModel)]="pacient.age">
+              <select  class="form-control select-size" name="sexo"  required [(ngModel)]="pacient.sex">
+                <option *ngFor="let gender of genderList" [value]="gender.value">
+                  {{gender.display}}
+                </option>
+              </select>
+							<!-- <input type="text" class="form-control" name="sexo" placeholder="Sexo" required [(ngModel)]="pacient.sex"> -->
+							<input type="text" class="form-control" name="peso" placeholder="Peso" required [(ngModel)]="pacient.weight">
+							<input type="text" class="form-control" name="altura" placeholder="Altura" required [(ngModel)]="pacient.height">
+							<input type="text" class="form-control" name="duraciónQRS" placeholder="Duración QRS" required [(ngModel)]="pacient.qrs_duration">
+							<input type="text" class="form-control" name="intervaloPR" placeholder="Intervalo PR" required [(ngModel)]="pacient.pr_interval">
+							<input type="text" class="form-control" name="intervaloQT" placeholder="Intervalo QT" required [(ngModel)]="pacient.qt_interval">
+							<input type="text" class="form-control" name="intervaloT" placeholder="Intervalo T" required [(ngModel)]="pacient.t_interval">
+							<input type="text" class="form-control" name="intervaloP" placeholder="Intervalo P" required [(ngModel)]="pacient.p_interval">
+							<input type="text" class="form-control" name="qrsAmplitud" placeholder="Amplitud QRS" required [(ngModel)]="pacient.qrs">
+							<input type="text" class="form-control" name="frecuenciaCardíaca" placeholder="Frecuencia cardíaca" required [(ngModel)]="pacient.heart_rate">
+              <input type="text" class="form-control" name="ondaQ" placeholder="Onda Q" required [(ngModel)]="pacient.q_wave">
+							<input type="text" class="form-control" name="ondaR" placeholder="Onda R" required [(ngModel)]="pacient.r_wave">
+							<input type="text" class="form-control" name="ondaS" placeholder="Onda S" required [(ngModel)]="pacient.s_wave">
+
+
+							<div class="text-center">
+								<button [disabled]="!pacientForm.valid" type="submit" class="main-btn">Aplicar Diagnostico</button>
+							</div>
+            </form>
+            <div *ngIf="!visibleForm" >
+              <div *ngIf="result.res == 0">
+                <div class="alert alert-success">
+                  <strong>Excelentes noticias!</strong> Los datos indican que el paciente no sufre de enfermedad coronaria.
+                </div>
+              </div>
+              <div *ngIf="result.res == 1">
+                <div class="alert alert-warning">
+                  <strong>Oh no!</strong> Todo indica que el paciente sufre de enfermedad coronaria.
+                </div>
+              </div>
+              <button class="main-btn" (click)="toggleVisibleForm()">Regresar</button>
+            </div>
+          </div>
+        </div>
+
+
+			</div>
+		</div>
+	</section>

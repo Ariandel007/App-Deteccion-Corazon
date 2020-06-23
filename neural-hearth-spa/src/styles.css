@@ -1,0 +1,374 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.banner_box {
+  max-width: 1620px;
+  margin: auto;
+}
+
+.diagnosis-area {
+  background: #f9f9ff;
+  position: relative;
+  z-index: 5;
+}
+.diagnosis-area .diagnosis-wrap {
+  border-bottom: 1px solid #eee;
+}
+.diagnosis-area .diagnosis-left h1 {
+  margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+  .diagnosis-area .diagnosis-left h1 {
+    font-size: 30px;
+  }
+}
+.diagnosis-area .diagnosis-left p {
+  max-width: 450px;
+}
+@media (max-width: 991px) {
+  .diagnosis-area .diagnosis-left {
+    padding-top: 120px;
+    margin-bottom: 40px;
+  }
+}
+.diagnosis-area .diagnosis-left .time-list {
+  margin-top: 50px;
+  padding-left: 0;
+}
+.diagnosis-area .diagnosis-left .time-list li {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.diagnosis-area .diagnosis-right {
+  margin: -20px 0;
+  background-color: white;
+  box-shadow: 0px 10px 20px 0px rgba(153, 153, 153, 0.1);
+}
+@media (max-width: 767px) {
+  .diagnosis-area .diagnosis-right {
+    margin-top: 30px;
+  }
+}
+.diagnosis-area .diagnosis-right .form-wrap {
+  padding: 30px 40px 50px;
+}
+@media (max-width: 413px) {
+  .diagnosis-area .diagnosis-right .form-wrap {
+    padding: 0px;
+  }
+}
+@media (max-width: 420px) {
+  .diagnosis-area .diagnosis-right .form-wrap .confirm_btn_box {
+    padding-bottom: 50px;
+  }
+}
+.diagnosis-area .diagnosis-right .form-wrap .main_btn {
+  border-radius: 0;
+}
+.diagnosis-area .diagnosis-right .form-wrap .form-control {
+  margin-bottom: 10px;
+  border-radius: 0px;
+  padding: 0.675rem 0.75rem;
+  font-size: 13px;
+  font-weight: 300;
+}
+.diagnosis-area .diagnosis-right .form-wrap .form-control:focus {
+  box-shadow: none;
+}
+.diagnosis-area .diagnosis-right .form-wrap .current {
+  margin-left: -32px;
+  font-size: 13px;
+}
+.diagnosis-area .diagnosis-right .form-wrap .form-select .nice-select {
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+  background: #ffffff !important;
+}
+.diagnosis-area
+  .diagnosis-right
+  .form-wrap
+  .form-select
+  .nice-select
+  .list {
+  border: 1px solid #3face4;
+}
+.diagnosis-area
+  .diagnosis-right
+  .form-wrap
+  .form-select
+  .nice-select
+  .list
+  .option {
+  padding-left: 15px;
+}
+.diagnosis-area
+  .diagnosis-right
+  .form-wrap
+  .form-select
+  .nice-select
+  .list
+  .option:hover {
+  color: #3face4;
+}
+.diagnosis-area
+  .diagnosis-right
+  .form-wrap
+  .form-select
+  .nice-select
+  .list
+  .option.selected {
+  color: #3face4;
+}
+.diagnosis-area .diagnosis-right .form-wrap .primary-btn {
+  width: 100%;
+  margin-top: 5px;
+}
+.diagnosis-area .diagnosis-right .form-wrap textarea {
+  width: 100%;
+  border: 1px solid #ced4da;
+  margin-bottom: 20px;
+  padding: 0.675rem 0.75rem;
+  font-size: 13px;
+  font-weight: 300;
+}
+.diagnosis-area .diagnosis-right .form-wrap textarea:focus {
+  border: 1px solid #3face4;
+  outline: none;
+}
+
+body {
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: #777777;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.p_120 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.p_100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.p0 {
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow: hidden;
+}
+
+.pad_top {
+  padding-top: 120px;
+}
+@media (max-width: 1224px) {
+  .pad_top {
+    padding-top: 50px;
+  }
+}
+
+.pad_bottom {
+  padding-bottom: 120px;
+}
+@media (max-width: 1224px) {
+  .pad_bottom {
+    padding-bottom: 50px;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.row.m0 {
+  margin: 0px;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.pb-30 {
+  padding-top: 30px !important;
+}
+
+@media (max-width: 991px) {
+  .pl-0 {
+    padding-left: 15px !important;
+  }
+}
+
+.pr-0 {
+  padding-right: 0px !important;
+}
+@media (max-width: 991px) {
+  .pr-0 {
+    padding-right: 15px !important;
+  }
+}
+
+.pt-30 {
+  padding-top: 30px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.mr-13 {
+  margin-right: 30px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.section_gap {
+  padding: 120px 0px;
+}
+@media (max-width: 1224px) {
+  .section_gap {
+    padding: 50px 0px;
+  }
+}
+
+.section_gap_custom {
+  padding: 120px 0px 90px;
+}
+@media (max-width: 1224px) {
+  .section_gap_custom {
+    padding: 50px 0px 20px;
+  }
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 1224px) {
+  .section-title-wrap {
+    margin-bottom: 30px;
+  }
+}
+.section-title-wrap h1 {
+  margin: 0;
+}
+.section-title-wrap p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.container-fluid {
+  margin: 0px !important;
+  padding: 0px 8% !important;
+}
+@media (max-width: 1224px) {
+  .container-fluid {
+    padding: 0px 15px !important;
+  }
+}
+
+@media (min-width: 1620px) {
+  .box_1620 {
+    max-width: 1650px;
+    margin: auto;
+  }
+}
+.img-overlay {
+  background: rgba(0, 0, 0, 0.28);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.owl-dots {
+  text-align: -webkit-center;
+}
+@media (max-width: 992px) {
+  .owl-dots {
+    display: none;
+  }
+}
+.owl-dots .owl-dot {
+  width: 14px;
+  height: 14px;
+  background: #eeeeee;
+  display: inline-block;
+  margin-right: 10px;
+}
+.owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+.owl-dots .owl-dot.active {
+  background: #000000;
+}
